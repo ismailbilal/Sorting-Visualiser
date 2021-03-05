@@ -1,0 +1,82 @@
+body {
+    color:#1E1E38;
+    font-family:"Open Sans","Helvetica","Arial",sans-serif;
+   }
+.cont{
+    width: 1300px;
+    height: 610px;
+    margin: auto;
+    margin-top: 30px;
+}
+.cont2{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+}
+.view{
+    float: left;
+    width: 49%;
+    height: 47.5%;
+    margin: auto;
+    margin-left: 0.5%;
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+}
+.bottons{
+    width: 80%;
+    height: 16%;
+    margin: auto;
+    text-align: center;
+}
+.tiges{
+    width: 94%;
+    height: 85%;
+    margin: auto;
+    margin-bottom: 4px;
+    border-bottom: 1px solid;
+}
+.tiges:hover{
+    background-color: rgb(255, 214, 153);
+}
+.control{
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 5px;
+}
+.range{
+    width: 20%;
+    height: 100%;
+    margin-right: 20px;
+    background-color: #8a44b3;
+}
+#bottonsAll{
+    font-weight: bolder;
+    width: 30%;
+    padding: auto;
+    text-align: center;
+}
+input[type="button"] {
+    background-color: white;
+    font-size: 120%;
+    font-weight: bolder;
+    height: 80%;
+    margin: auto;
+    margin-right: 10px;
+    border: none;
+    color: #8a44b3;
+}
+input[type="button"]:hover{
+    border-top: 3px solid #E0544C;
+    color: #E0544C;
+}
+span nav em{
+    text-align: center;
+    float: left;
+    width: 0px;
+    height: 0px;
+    margin-right: 0px;
+    background-color: rgb(31, 184, 204);
+    color: white;
+}
