@@ -30,10 +30,7 @@ var x = parseFloat(range.value);
 
 document.addEventListener("DOMContentLoaded", function(){
     
-    loadView(viewSelect, check, 0);
-    loadView(viewBulle, check, x);
-    loadView(viewInsert, check, 2*x);
-    loadView(viewQuick, check, 3*x);
+    reloadeAll();
 
     sortSelect.addEventListener("click", function(){
         sort_select();
@@ -65,18 +62,8 @@ document.addEventListener("DOMContentLoaded", function(){
     sortQuick.addEventListener("click", function(){
         sort_quick();
     })
-    resetAll.addEventListener("click", function(){
-        loadView(viewSelect, check, 0);
-        loadView(viewBulle, check, x);
-        loadView(viewInsert, check, 2*x);
-        loadView(viewQuick, check, 3*x);
-    })
-    range.addEventListener("change", function(){
-        loadView(viewSelect, check, 0);
-        loadView(viewBulle, check, x);
-        loadView(viewInsert, check, 2*x);
-        loadView(viewQuick, check, 3*x);
-    })
+    resetAll.addEventListener("click", reloadeAll)
+    range.addEventListener("change", reloadeAll)
 })
 
 
@@ -128,9 +115,12 @@ function makeItOrange(i){
     em[i].style.backgroundColor = "rgb(255, 119, 78)";
 }
 /*--------------------------------------------*/
-
-
-
+function reloadeAll(){//to reset all
+    loadView(viewSelect, check, 0);
+    loadView(viewBulle, check, x);
+    loadView(viewInsert, check, 2*x);
+    loadView(viewQuick, check, 3*x);
+}
 /*--------------------algorithms----------------------*/
 function sort_select(){
 
