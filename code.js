@@ -9,6 +9,9 @@ var viewQuick = navs[3];
 var em = new Array();
 var numbersToSort = new Array();
 
+var range = inputs[0];
+var resetAll = inputs[1];
+var sortAll = inputs[2];
 var resetSelect = inputs[3];
 var sortSelect = inputs[4];
 var resetBulle = inputs[5];
@@ -17,9 +20,6 @@ var resetInsert = inputs[7];
 var sortInsert = inputs[8];
 var resetQuick = inputs[9];
 var sortQuick = inputs[10];
-var range = inputs[0];
-var resetAll = inputs[1];
-var sortAll = inputs[2];
 
 var check = true;
 
@@ -95,11 +95,9 @@ function loadView(vi_ew, check_2, start){
     for(var ind=start; ind<x+start; ++ind){
         em[ind].style.marginRight = ""+margin_right+"%";
     }
-    
 }
 function nbAlea(min, max) {
-    var nb = min +(max - min + 1)*Math.random();
-    return Math.floor(nb);
+    return Math.floor(min +(max - min + 1)*Math.random());
 }
 /*---------------changes colores---------------*/
 function makeItRed(i){
@@ -516,18 +514,14 @@ function sort_quick(){
 
 /*--------aide sort------------*/
 function swap(table, x, y){
-    var c = table[x];
+    let c = table[x];
     table[x] = table[y];
     table[y] = c;
 }
 function fact(n){
-    if(n == 1){return 1;}
-    return n+fact(n-1);
+    return (n == 1) ? 1: n+fact(n-1);
 }
 function checkDisabled(){
-    if(sortSelect.disabled || sortBulle.disabled || sortInsert.disabled || sortQuick.disabled){
-        return true;
-    }
-    return false;
+    return (sortSelect.disabled || sortBulle.disabled || sortInsert.disabled || sortQuick.disabled) ? true:false;
 }
 /*-------------------------------*/
