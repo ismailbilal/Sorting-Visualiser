@@ -49,7 +49,6 @@ body {
     width: 20%;
     height: 100%;
     margin-right: 20px;
-    background-color: #8a44b3;
 }
 #bottonsAll{
     font-weight: bolder;
@@ -106,4 +105,10 @@ span nav em{
     margin-right: 0px;
     background-color: rgb(31, 184, 204);
     color: white;
+}
+input[type=range] {
+    -webkit-appearance: none !important ;
+    width: 20%;
+    background-color: #9b59bf;
+    border: 1px solid darken(#9B59BF, 4%);
 }

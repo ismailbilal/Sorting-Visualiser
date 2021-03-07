@@ -102,10 +102,10 @@ function nbAlea(min, max) {
 }
 /*---------------changes colores---------------*/
 function makeItRed(i){
-    em[i].style.backgroundColor = "red";
+    em[i].style.backgroundColor = "rgb(255, 59, 59)";
 }
 function makeItGreen(i){
-    em[i].style.backgroundColor = "rgb(58, 211, 116)";
+    em[i].style.backgroundColor = "#9b59bf9f";
 }
 function makeItBlue(i){
     em[i].style.backgroundColor = "rgb(31, 184, 204)";
