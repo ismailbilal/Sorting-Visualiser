@@ -29,6 +29,19 @@ body {
     margin: auto;
     text-align: center;
 }
+.sortName{
+    float: left;
+    width: 25%;
+    height: 80%;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: -1%;
+    margin-right: 50px;
+    background-color: white;
+    border: 1px solid;
+    border-top: none;
+    padding-top:3px;
+}
 .tiges{
     width: 94%;
     height: 84%;
@@ -46,29 +59,25 @@ body {
     margin-bottom: 5px;
 }
 .range{
-    width: 20%;
-    height: 100%;
-    margin-right: 20px;
+    float: left;
+    width: 49%;
+    padding-top: 18px;
 }
 #bottonsAll{
+    float: right;
     font-weight: bolder;
-    width: 30%;
-    padding: auto;
-    text-align: center;
-}
- button:focus{
- outline:2px auto #E0544C
+    width: 50%;
+    padding-top: 10px;
 }
  button{
- background-color:transparent;
- color:#9B59BF;
- font-family:'Open Sans', Helvetica, Arial, sans-serif;
- font-size:20px;
- font-weight:bold;
- padding:.2em .6em;
- position:relative;
- margin:5px 0;
- white-space:nowrap
+     float: left;
+     background-color:transparent;
+     color:#a245d4;
+     font-family:'Open Sans', Helvetica, Arial, sans-serif;
+     font-size:20px;
+     font-weight:bold;
+     position:relative;
+     white-space:nowrap;
 }
  button::before{
  content:"";
@@ -79,7 +88,6 @@ body {
 }
  button::before{
  background-color:#E0544C;
- bottom:100%;
  margin-bottom:5px;
  height:0px;
  transition:height ease 200ms, margin-bottom ease 200ms
@@ -90,9 +98,6 @@ body {
  button:hover::before{
  height:5px;
  margin-bottom:0
-}
- button:hover{
- cursor:pointer
 }
 button{
     border: 0;
@@ -108,7 +113,8 @@ span nav em{
 }
 input[type=range] {
     -webkit-appearance: none !important ;
-    width: 20%;
+    float: right;
+    width: 30%;
     background-color: #9b59bf;
     border: 1px solid darken(#9B59BF, 4%);
 }
