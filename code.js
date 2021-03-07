@@ -1,4 +1,5 @@
 var inputs = document.querySelectorAll("input");
+var buttons = document.querySelectorAll("button");
 var navs = document.querySelectorAll("nav");
 
 var viewSelect = navs[0];
@@ -10,16 +11,16 @@ var em = new Array();
 var numbersToSort = new Array();
 
 var range = inputs[0];
-var resetAll = inputs[1];
-var sortAll = inputs[2];
-var resetSelect = inputs[3];
-var sortSelect = inputs[4];
-var resetBulle = inputs[5];
-var sortBulle = inputs[6];
-var resetInsert = inputs[7];
-var sortInsert = inputs[8];
-var resetQuick = inputs[9];
-var sortQuick = inputs[10];
+var resetAll = buttons[0];
+var sortAll = buttons[1];
+var resetSelect = buttons[2];
+var sortSelect = buttons[3];
+var resetBulle = buttons[4];
+var sortBulle = buttons[5];
+var resetInsert = buttons[6];
+var sortInsert = buttons[7];
+var resetQuick = buttons[8];
+var sortQuick = buttons[9];
 
 var check = true;
 
