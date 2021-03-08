@@ -104,7 +104,7 @@ function nbAlea(min, max) {
 function makeItRed(i){
     em[i].style.backgroundColor = "rgb(255, 59, 59)";
 }
-function makeItGreen(i){
+function makeItPurple(i){
     em[i].style.backgroundColor = "#9b59bf9f";
 }
 function makeItBlue(i){
@@ -185,7 +185,7 @@ function sort_select(){
                 posMin = aideJ;
                 
                 for(var lakhdar = 0; lakhdar<aideJ; lakhdar++){
-                    makeItGreen(lakhdar);
+                    makeItPurple(lakhdar);
                 }
             }
             j++;
@@ -252,18 +252,18 @@ function sort_bulle(){
             loadView(viewBulle, check, x);
             check = true;
             for(var lakhdar = 2*x-1; lakhdar >= 2*x-aideJ; lakhdar--){
-                makeItGreen(lakhdar);
+                makeItPurple(lakhdar);
             }
             if(aideJ == x-1){
-                makeItGreen(aideJ+1);
+                makeItPurple(aideJ+1);
             }
         }, parseFloat((s_b++)*timaider));
 
         set4[i] = setTimeout(function(){
             if(echange){
                 echange = false;
-                makeItGreen(j);
-                makeItGreen(j+1);
+                makeItPurple(j);
+                makeItPurple(j+1);
             }
         }, parseFloat((s_b++)*timaider));
 
@@ -282,7 +282,7 @@ function sort_bulle(){
                         clearTimeout(set5[stopAider]);
                     }
                     for(var lakhdar = x; lakhdar < 2*x; lakhdar++){
-                        makeItGreen(lakhdar);
+                        makeItPurple(lakhdar);
                     }
                     resetBulle.disabled = false;
                     sortBulle.disabled = false;
@@ -369,7 +369,7 @@ function sort_insert(){
                         clearTimeout(set5[stopAider]);
                     }
                     for( var lakhdar = 2*x; lakhdar < 3*x; lakhdar++){
-                        makeItGreen(lakhdar);
+                        makeItPurple(lakhdar);
                     }
                     resetInsert.disabled = false;
                     sortInsert.disabled = false;
@@ -446,29 +446,29 @@ function sort_quick(){
             check = false;
             loadView(viewQuick, check, 3*x);
             check = true;
-            for(let k = start; k < largenum; k++){
+
+            /*
+            for(var k = start; k < largenum; k++){
                 makeItOrange(k);
             }
-            for(let k = largenum; k <= j; k++){
+            */
+            
+            for(var k = largenum; k <= j; k++){
                 makeItRed(k);
             }
-            for(let index = 0; index < in_de-1; index++){
-                makeItGreen(index_sorted[index]);
+            for(var index = 0; index < in_de-1; index++){
+                makeItPurple(index_sorted[index]);
             }
-            for(let k = 3*x; k < start; k++){
-                makeItGreen(k);
+            for(var k = 3*x; k < start; k++){
+                makeItPurple(k);
             }
         }, parseFloat((s_q++)*timaider));
 
         set4[i] = setTimeout(function(){
             j++;
-            i_q++;
             if(j >= end){
                 index_sorted[in_de] = largenum-1;
-                index_sorted.sort();
-                for(let v = 0; v<=in_de; v++){
-                    console.log(index_sorted[v]+"  >  "+numbersToSort[index_sorted[v]]);
-                }
+                index_sorted.sort(function(a, b){return a - b;});
                 in_de++;
                 if(end - start < 2 || pass || pivot - start < 2 || j > pivot+1){
                     in_end++;
@@ -485,10 +485,7 @@ function sort_quick(){
                 if(end > start){
                     pivot = end-1;
                 }
-                console.log("pivot  > "+pivot);
                 j = start;
-                console.log("start  >  "+start);
-                console.log("end   >  "+end);
                 if(start >= 4*x){
                     for(let k = i_q; k <= fac; k++){
                         clearTimeout(set1[k]);
@@ -497,7 +494,7 @@ function sort_quick(){
                         clearTimeout(set4[k]);
                     }
                     for(let k = 3*x; k < start-1; k++){
-                        makeItGreen(k);
+                        makeItPurple(k);
                     }
                     resetQuick.disabled = false;
                     sortQuick.disabled = false;
@@ -506,6 +503,7 @@ function sort_quick(){
                     range.disabled = checkDisabled();
                 }
             }
+            i_q++;
         }, parseFloat((s_q++)*timaider));
     }
 }
