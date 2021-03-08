@@ -70,34 +70,36 @@ body {
     padding-top: 10px;
 }
  button{
-     float: left;
-     background-color:transparent;
-     color:#a245d4;
-     font-family:'Open Sans', Helvetica, Arial, sans-serif;
-     font-size:20px;
-     font-weight:bold;
-     position:relative;
-     white-space:nowrap;
+    float: left;
+    background-color:transparent;
+    color:#a245d4;
+    font-family:'Open Sans', Helvetica, Arial, sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    position:relative;
+    white-space:nowrap;
+    margin-top: 5px;
 }
- button::before{
- content:"";
- display:block;
- position:absolute;
- left:0;
- right:0
+button::before{
+    content:"";
+    display:block;
+    position:absolute;
+    left:0;
+    right:0
 }
- button::before{
- background-color:#E0544C;
- margin-bottom:5px;
- height:0px;
- transition:height ease 200ms, margin-bottom ease 200ms
+button::before{
+    background-color:#E0544C;
+    margin-bottom:5px;
+    bottom: 97%;
+    height:0px;
+    transition:height ease 200ms, margin-bottom ease 200ms
 }
- button:hover{
- color:#E0544C
+button:hover{
+    color:#E0544C
 }
- button:hover::before{
- height:5px;
- margin-bottom:0
+button:hover::before{
+    height:5px;
+    margin-bottom:0
 }
 button{
     border: 0;
