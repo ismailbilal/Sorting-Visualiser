@@ -97,22 +97,12 @@ function loadView(vi_ew, check_2, start){
         em[ind].style.marginRight = ""+margin_right+"%";
     }
 }
-function nbAlea(min, max) {
-    return Math.floor(min +(max - min + 1)*Math.random());
-}
+const nbAlea = (min, max) => Math.floor(min +(max - min + 1)*Math.random());
 /*---------------changes colores---------------*/
-function makeItRed(i){
-    em[i].style.backgroundColor = "rgb(255, 59, 59)";
-}
-function makeItPurple(i){
-    em[i].style.backgroundColor = "#9b59bf9f";
-}
-function makeItBlue(i){
-    em[i].style.backgroundColor = "rgb(31, 184, 204)";
-}
-function makeItOrange(i){
-    em[i].style.backgroundColor = "rgb(255, 119, 78)";
-}
+const makeItRed = (i) => em[i].style.backgroundColor = "rgb(255, 59, 59)";
+const makeItPurple = (i) => em[i].style.backgroundColor = "#9b59bf9f";
+const makeItBlue = (i) => em[i].style.backgroundColor = "rgb(31, 184, 204)";
+const makeItOrange = (i) => em[i].style.backgroundColor = "rgb(255, 119, 78)";
 /*--------------------------------------------*/
 function reloadeAll(){//to reset all
     loadView(viewSelect, check, 0);
