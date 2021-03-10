@@ -68,17 +68,16 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
-
 /*---------------------functions--------------------*/
 function loadView(vi_ew, check_2, start){
     x = parseFloat(range.value);
     var emElement = "<em></em>";
     vi_ew.innerHTML = "";
-    for(var i=start; i<x+start; i++){
+    for(let i=start; i<x+start; i++){
         vi_ew.innerHTML += emElement;
     }
     if(check_2){
-        for(var k=start; k<x+start; k++){
+        for(let k=start; k<x+start; k++){
             numbersToSort[k] = nbAlea(12, 99);
         }
     }
