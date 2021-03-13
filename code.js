@@ -100,7 +100,7 @@ const nbAlea = (min, max) => Math.floor(min +(max - min + 1)*Math.random());
 /*---------------changes colores---------------*/
 const makeItRed = (i) => em[i].style.backgroundColor = "rgb(255, 59, 59)";
 const makeItPurple = (i) => em[i].style.backgroundColor = "#9b59bf9f";
-const makeItBlue = (i) => em[i].style.backgroundColor = "rgb(31, 184, 204)";
+const makeItBlue = (i) => em[i].style.backgroundColor = "rgba(24, 201, 224, 0.425)";
 const makeItOrange = (i) => em[i].style.backgroundColor = "rgb(255, 119, 78)";
 /*--------------------------------------------*/
 function reloadeAll(){//to reset all

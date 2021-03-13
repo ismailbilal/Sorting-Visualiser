@@ -30,16 +30,18 @@ body {
     text-align: center;
 }
 .sortName{
+    position: relative;
+    left: 0%;
+    bottom: 99%;
     float: left;
+    z-index: 2;
     width: 25%;
     height: 80%;
     font-size: 100%;
     font-weight: normal;
-    margin-top: -1%;
-    margin-right: 50px;
     background-color: white;
     border: 1px solid;
-    border-top: none;
+    border-bottom: none;
     padding-top:3px;
 }
 .tiges{
@@ -59,6 +61,8 @@ body {
     margin-bottom: 5px;
 }
 .range{
+    position: relative;
+    z-index: 1;
     float: left;
     width: 49%;
     padding-top: 18px;
@@ -105,12 +109,14 @@ button{
     border: 0;
 }
 span nav em{
+    position: relative;
+    z-index: 3;
     text-align: center;
     float: left;
     width: 0px;
     height: 0px;
     margin-right: 0px;
-    background-color: rgb(31, 184, 204);
+    background-color: rgba(24, 201, 224, 0.425);
     color: white;
 }
 input[type=range] {
